@@ -1,0 +1,69 @@
+# OS
+.DS_Store
+._*
+Thumbs.db
+$RECYCLE.BIN/
+
+# Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.idea/
+*.sublime-workspace
+*.sublime-project
+*~
+*.swp
+
+# AI tools
+.aider*
+!.aider.conf.yml
+!.aiderignore
+.mcp.json
+.cursor/
+.cursorrules
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+venv/
+
+# Testing & coverage
+htmlcov/
+.coverage
+.coverage.*
+.pytest_cache/
+.tox/
+.nox/
+coverage.xml
+
+# Type checkers
+.mypy_cache/
+.pytype/
+.pyre/
+
+# Logs
+*.log
+
+# Environment files
+.env.local
+.env.*.local
+
+# Deployment
+deploy/instances.yml
+deploy/generated/
+deploy/machinekey/
+deploy/.env.local-test
