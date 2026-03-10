@@ -8,6 +8,7 @@ import os
 from typing import Any, Dict, Optional
 
 from mcp.server import FastMCP
+from mcp.server.transport_security import TransportSecuritySettings
 
 from .bearer import BearerExtractMiddleware
 from .config import OdooConfig, get_config
@@ -63,6 +64,9 @@ class OdooMCPServer:
         self.app = FastMCP(
             name="odoo-mcp-server",
             instructions="MCP server for accessing and managing Odoo ERP data through the Model Context Protocol",
+            transport_security=TransportSecuritySettings(
+                enable_dns_rebinding_protection=False,
+            ),
         )
 
         logger.info(f"Initialized Odoo MCP Server v{SERVER_VERSION}")

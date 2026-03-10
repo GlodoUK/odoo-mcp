@@ -15,6 +15,9 @@ An MCP server that connects Claude to Odoo. Runs as a Docker container; each use
 
 The server passes the incoming `Authorization: Bearer` token straight through to Odoo — no separate credential store, no OAuth layer. Odoo validates the token and enforces its own access rules.
 
+:warning: enable_dns_rebinding_protection is explicitly disabled for our use cases.
+Ensure that you handled this appropriately in your infrastructure.
+
 ## Quick start
 
 ```bash
